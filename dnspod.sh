@@ -7,19 +7,19 @@ dnspod_ddnsipv6_subdomain='pan' #【二级域名】将引号内容修改为自�
 get_ipv6_mode='2' # 【获取IPV6方式】支持两种方式，第一种是直接从你的网卡获取，用这种方法请填1。一种是通过访问网页接口获取公网IP6，这种方法请填2
 local_net="eth0" # 【网络适配器】 默认为eth0，如果你的公网ipv6地址不在eth0上，需要修改为对应的网络适配器
 # 常用的规范【二级域名】
-# 【www】 常见主机记录，将域名解析为 www.test.com
-# 【@】   直接解析主域名 test.com
-# 【*】   泛解析，匹配其他所有域名 *.test.com
+# 【www】 常见主机记录，将域名解析为 www.baidu.com
+# 【@】   直接解析主域名 baidu.com
+# 【*】   泛解析，匹配其他所有域名 *.baidu.com
 
 
 
 # 举例
 # 在腾讯云注册域名，登陆DNSPOD，在【我的账号】的【账号中心】中，有【密钥管理】
 # 点击创建密钥即可创建一个API
-# 如果你在腾讯云注册域名叫【test.com】
-# 那么【dnspod_ddnsipv6_domain】后面就填【test.com】
+# 如果你在腾讯云注册域名叫【baidu.com】
+# 那么【dnspod_ddnsipv6_domain】后面就填【baidu.com】
 # 然后根据常用的规范/自己想要的名字在【dnspod_ddnsipv6_subdomain】填入自己需要的名字
-# 现假设为【file】，那么你的访问地址为【file.test.com】
+# 现假设为【pan】，那么你的访问地址为【pan.baidu.com】
 if [ "$dnspod_ddnsipv6_record" = "@" ]
 then
   dnspod_ddnsipv6_name=$dnspod_ddnsipv6_domain
